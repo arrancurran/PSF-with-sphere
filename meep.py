@@ -12,9 +12,14 @@ domain_size = mp.Vector3(16, 12)
 resolution = 40  # pixels per unit
 
 # Geometry
-geometry = [mp.Circle(center=mp.Vector3(0, 0),
-                      radius=radius,
-                      material=mp.Medium(index=n_sphere))]
+
+geometry = [
+    mp.Cylinder(
+        radius=2.0,           # radius of the cylinder
+        height=mp.inf,        # infinite along z => 2D cross-section
+        material=mp.Medium(index=1.5)
+    )
+]
 
 # Source: Gaussian beam approximation
 fcen = frequency
