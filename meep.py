@@ -33,9 +33,17 @@ def debye_wolf_field(x_coords):
     field /= np.max(np.abs(field))
     return field
 
+<<<<<<< HEAD
+sources = [mp.Source(mp.GaussianSource(frequency=fcen, fwidth=df),
+                     component=mp.Ez,
+                     center=mp.Vector3(0, 0),
+                     size=mp.Vector3(0, 4),
+                     amplitude=1.0)]
+=======
 # Source plane sampling
 src_x = np.linspace(-cell_size.x/2, cell_size.x/2, int(cell_size.x*resolution))
 Ez_profile = debye_wolf_field(src_x)
+>>>>>>> 43858928ede56fbad67f6a1236d1e0afabda4054
 
 # --- Wrap into a MEEP custom source ---
 def src_time(t):
