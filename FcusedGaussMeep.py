@@ -7,7 +7,7 @@ wavelength = 1.0
 frequency = 1 / wavelength
 cell_x = 200
 cell_y = 160
-resolution = 50
+resolution = 100
 
 # Lens parameters
 lens_center_x = 0
